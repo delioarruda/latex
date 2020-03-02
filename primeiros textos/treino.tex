@@ -1,0 +1,107 @@
+% pacote de formatção de papel e tipo de documento
+\documentclass[a4paper,12pt]{article}
+%pacote para referenciar margens do documento
+\usepackage[top=2cm,bottom=2cm,left=2.5cm,right=2.5cm]{geometry}
+%pacote com o tipo de codificação usada
+\usepackage[utf8]{inputenc}
+%pacote para simbolos e fontes
+\usepackage {amsmath, amsfonts, amssymb}
+%para decalrar o operador matemático
+\DeclareMathOperator{\sen}{sen}
+\DeclareMathOperator{\tg}{tg}
+\DeclareMathOperator{\cossec}{cossec}
+% define o título
+\author{Délio de Arruda Almeida}
+%definir o titulo
+\title{Educação Estatística}
+\begin{document}
+   % gera o título
+   \maketitle
+   % insere o índices
+   \tableofcontents
+
+   \section{Equação Polinômial do 2º Grau}
+     É uma equação do tipo $ax^2+bx+c=0$ com $a\neq 0$ será chamada de        equação polinomial do 2º grau.
+
+   A solução dessa equação é dada por: $$x=\frac{-b\pm\sqrt[]{b^2-4ac}}{2a}$$
+
+   \begin{center}
+   para centralizar 
+   \end{center}
+   \begin{flushright}
+   para alinhar a direita
+   \end{flushright}
+   \begin{flushleft}
+   para alinhar a esquesda
+   \end{flushleft}
+
+   Bem, \textit{aqui inicia} \textit{\textbf{meu adorável}} artigo.
+
+   \underline{para deixar sublinhado}
+
+   \textbf{\textit{\underline{para dar os três efeitos basta aninhar}}}
+   \section{Tchau Mundo}
+   \ldots{} e aqui ele termina.
+   \begin{enumerate}
+       \item Primeira Questão
+          \begin{enumerate}
+             \item Primeira acertiva da questão
+                \begin{enumerate}
+                   \item terceito nível
+                \end{enumerate}
+             \item Segunda acertiva da questão
+          \end{enumerate}
+
+       \item Segunda Questão
+       \item Terceira Questão 
+   \end{enumerate}
+   \begin{itemize}
+      \item primerio item da lista
+       não é item da lista
+      \item segundo item da lista
+          \begin{itemize}
+            \item primteiro item da sublista
+            $a \cdot b$ $$ a\times b $$
+          \end{itemize}
+   \end{itemize}
+   isso é uma fração na formatação da linha: $\frac{a}{b}$ 
+   
+   isso é uma fração fora da linha: $\dfrac{a}{b}$
+   
+   potência: $a^{(b+c)}$
+   
+   sub escritos: $a_{bacaxi}$
+   
+   %para inserir espaço entre os itens digite \, para inserir sibolos usados pelo latex use \ exemplo: \}   
+   Sejam os conjuntos: $ A = \{ a,\,b,\,c,\,d\}$
+   
+   $$ B= \{ x\in \mathbb{R} \,\mid \,-2 \leq \leqslant x < 4\geqslant \geq 0 \}  $$ 
+   % nas notações de conjuntos A - B também pode ser representado assim
+   $$A \setminus B$$
+   
+   $\subset \not\subset \ntriangleleft \subsetneq \varsubsetneq\nsubseteq$ \newline $7 \not\in \{ x \in \mathbb{N} \, \mid \,x \textrm{ é par}\}$  
+   \begin{enumerate}
+      \item Seja a função $f:\mathbb{R} \to \mathbb{R}$ definida por $f(x)= \dfrac{1}{2}x^2-2x + 1$.
+      \begin{enumerate}
+         \item Esboce o gráfico da função.
+         \item $x \mapsto \dfrac{1}{2}x^2-2x + 1$.
+         $$f(x)=   
+   \begin{cases}
+      x^2 - 1; \,\textrm{se } x \geq 1\\
+      x-3;\,\textrm{se }-1 \leq x < 1\\
+      2x + 1; \,\textrm{se } x>1
+   \end{cases}$$
+         \item $f(x)= \log_2x + \ln x $
+         \item $f(x) = \cos x$.
+         \item $f(x) = \sin x$.
+         \item $f(x) = \textrm{sen}\, x$.
+         \item $f(x) = \sen \left( x- \dfrac{\pi}{2}\right)$.
+         \item $f(x) = \sen \left[ x- \dfrac{\pi}{2}\right]$.
+         
+          \item $f(x) = \sen \left\{ x- \dfrac{\pi}{2}\right\}$.
+      \end{enumerate}
+   \end{enumerate}     
+   
+   
+   
+\end{document}
