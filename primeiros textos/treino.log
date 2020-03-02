@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.23)  2 MAR 2020 15:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.23)  2 MAR 2020 16:27
 entering extended mode
 **./treino.tex
 (treino.tex
@@ -201,37 +201,38 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
  [1
 
-{C:/Users/PMMH/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] (treino.
-aux) ) 
+{C:/Users/PMMH/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] [3] (tre
+ino.aux) ) 
 Here is how much of TeX's memory you used:
  2121 strings out of 481556
  28481 string characters out of 2914337
- 269637 words of memory out of 3000000
+ 270637 words of memory out of 3000000
  17376 multiletter control sequences out of 15000+200000
  542518 words of font info for 62 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 30i,9n,27p,235b,270s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\PMMH\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi6
-00\tcrm1200.pk> <C:\Users\PMMH\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappe
-n/ec/dpi600\tcbx1728.pk> <C:\Users\PMMH\AppData\Local\MiKTeX\2.9\fonts/pk/ljfou
-r/jknappen/ec/dpi600\tcbx1200.pk><C:/Users/PMMH/AppData/Local/Programs/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/PMMH/AppData/Local/Progr
-ams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/PMMH/AppDa
-ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/User
-s/PMMH/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.
-pfb><C:/Users/PMMH/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmmi8.pfb><C:/Users/PMMH/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmr12.pfb><C:/Users/PMMH/AppData/Local/Programs/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/PMMH/AppData/Local/Programs/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/PMMH/AppData/Local/Pro
-grams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/PMMH/AppDa
-ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/User
-s/PMMH/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/ms
-am10.pfb><C:/Users/PMMH/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/am
-sfonts/symbols/msbm10.pfb>
-Output written on treino.pdf (2 pages, 129130 bytes).
+ 30i,10n,27p,250b,270s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\PMMH\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/
+dpi600\tcrm1200.pk> <C:\Users\PMMH\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jkn
+appen/ec/dpi600\tcbx1728.pk> <C:\Users\PMMH\AppData\Local\MiKTeX\2.9\fonts/pk/l
+jfour/jknappen/ec/dpi600\tcbx1200.pk><C:/Users/PMMH/AppData/Local/Programs/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/PMMH/AppData/Local/P
+rograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/PMMH/A
+ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/
+Users/PMMH/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmm
+i12.pfb><C:/Users/PMMH/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmmi8.pfb><C:/Users/PMMH/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmr12.pfb><C:/Users/PMMH/AppData/Local/Programs/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/PMMH/AppData/Local/Programs/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/PMMH/AppData/Local
+/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/PMMH/A
+ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/U
+sers/PMMH/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti
+12.pfb><C:/Users/PMMH/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsf
+onts/symbols/msam10.pfb><C:/Users/PMMH/AppData/Local/Programs/MiKTeX 2.9/fonts/
+type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on treino.pdf (3 pages, 141276 bytes).
 PDF statistics:
- 73 PDF objects out of 1000 (max. 8388607)
+ 80 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
