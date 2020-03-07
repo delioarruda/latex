@@ -6,11 +6,20 @@
 \usepackage[utf8]{inputenc}
 %pacote para simbolos e fontes
 \usepackage {amsmath, amsfonts, amssymb}
+% pacote para inserir figuras
+\usepackage{graphicx}
+%pacote para inserir a figura extamente no local, ignorando a formatação do texto e espaçamento
+\usepackage{float}
+\usepackage[portuguese]{babel}
 %\setlength{\voffset}{-1.0cm} \setlength{\hoffset}{-0.5cm}
 %para decalrar o operador matemático
 \DeclareMathOperator{\sen}{sen}
 \DeclareMathOperator{\tg}{tg}
 \DeclareMathOperator{\cossec}{cossec}
+%definir novo comando
+\newcommand{\limite}{\displaystyle\lim}
+\newcommand{\integral}{\displaystyle\int}
+\newcommand{\somatorio}{\displaystyle\sum}
 % define o título
 \author{Délio de Arruda Almeida}
 %definir o titulo
@@ -144,5 +153,103 @@
         2\\ 10\\ 6
       \end{bmatrix}$$
    \end{enumerate}
+   %notação de segmento
+   \begin{enumerate}
+      \item Seja o segmento $\overline{AB}$. A partir dele podemos definir o segmento orientado $\overrightarrow{AB}$  e o segmento orientado $\overleftarrow{BA}$.
+      %notação de vetor
+      \item Seja o vetor $\vec{u}$.
+      \item Sejam os vetores $\vec{u}=(1;\,-1;\,2) \text{ e } \vec{v} = (2;\,5;\, -4)$.
+      Calcule o seguinte:
+      \begin{enumerate}
+         \item $\vec{u} \cdot \vec{v}$
+         \item $\vec{u} \times \vec{v}$
+         %outra forma de representar
+         \item Errado: $<\vec{u}\,\vec{v}>$. correto: $\langle\vec{u},\,\vec{v}\rangle$
+         %notação para modulo com barra dupla
+         \item $\|\vec{u}\|$
+         \item Representação errada do segmento orientado em modulo $\|\overrightarrow{AB}\|$
+         \item Representação correta do segmento orientado em modulo $\left\|\overrightarrow{AB}\right\|$
+         \item Representação de vetores ortogonais: $$\vec{u} \perp \vec{v}$$
+         \item Letras gregas $$\alpha$$ $$\beta$$
+         \item Sejam os vetores $\vec{u} = {x_0;\, y_0;\, z_0}$ e $\vec{v}={x_1;\, x_1;\, z_1}$. Temo que:$$
+         \vec{u} \times \vec{v} = \begin{vmatrix}
+         \vec{i} & \vec{j} & \vec{k}\\ x_0 & y_0 & z_0 \\ x_1 & y_1 & z_1
+         \end{vmatrix}$$
+         
+      \end{enumerate}
+   \end{enumerate}
+   \section{Aula 8 (Notações de Claculo)}
+   \begin{enumerate}
+   %o limite ficara estabelecido ao lado do operador
+      \item $\lim_{x \to 1} \dfrac{x^2 - 1}{x - 1}$
+      % com o $$ o limite será estabelecido na forma usual
+       \item $$\lim_{x \to 1} \dfrac{x^2 - 1}{x - 1}$$
+      % com o \displaystyle o limite será  forçado a ser exibido na forma usual
+      \item $\displaystyle\lim_{x \to 1} \frac{x^2 - 1}{x - 1}$
+      %depois de estabelecido o novo comando \newcommand{\limite}{\displaystyle\lim} faremos:
+      \item $\limite_{x \to 1} \frac{x^2 - 1}{x - 1}$
+      \item Derivadas:
+         \begin{enumerate}
+            \item $f'$ \item $f''$ \item $f'''$ \item $f^{(v)}$
+         \end{enumerate}
+      \item Seja a função definida por $f(x)=x^2 - \sqrt{x}$. Calcule as derivadas abaixo.
+      \begin{enumerate}
+         \item $\dfrac{df}{dx}$
+         \item $\dfrac{d^2f}{dx^2}$
+         \item $\dfrac{d^5f}{dx^5}$
+         \item $\dfrac{d^3f}{dx^3}$
+      \end{enumerate}
+      \item Seja a função definida por $f(x, \, y)=yx^2 - \sqrt{x} + y^3$. Calcule as derivadas abaixo.
+      \begin{enumerate}
+         \item $\dfrac{\partial f}{\partial x}$
+         \item $\dfrac{\partial^2f}{\partial x^2}$
+         \item $\dfrac{\partial^5f}{\partial x^5}$
+         \item $\dfrac{\partial^3f}{\partial x^3}$
+         \item $\dfrac{\partial }{\partial x}\left(\dfrac{\partial f}{\partial y} \right)$
+      \end{enumerate}
+      \item Calcule as integrais abaixo.
+      \begin{enumerate}
+         \item $\int_1^5 x^2\cos x \, dx$
+         \item $$\int_1^5 x^2\cos x \, dx$$
+         \item $\displaystyle\int_1^5 x^2\cos x \, dx$
+         \item $\integral_1^5 x^2\cos x \, dx$
+      \end{enumerate}
+      \item Calcule as integrais com somatórios abaixo.
+      \begin{enumerate}
+         \item $\sum_{i=1}^n \integral_0^{\infty} x^i\,dx$
+         \item $$\sum_{i=1}^n \integral_0^{\infty} x^i\,dx$$
+         \item $\displaystyle\sum_{i=1}^n \int_0^{\infty} x^i\,dx$
+         \item $\displaystyle\sum_{i=1}^n $ $\int_0^{\infty} x^i\,dx$
+         \item $\somatorio_{i=1}^n \integral_0^{\infty} x^i\,dx$
+      \end{enumerate}
+   \end{enumerate}
+   
+   \section{Aula9 (Como inserir figuras no Latex)}
+   
+   \begin{enumerate}
+      \item Calcule o valor da $x$ na figura \ref{triangulo}.%com essa referencia ele vai inserir o numero da figura 
+      \begin{figure}[!htb]
+      %como estou usanto scale=0.5 sera inserida a metade do tamanho da figura, como esta na mesma pasta não preciso colocar o caminho, apenas o nome do arquivo
+         \includegraphics[scale=0.5]{triangulo.jpg}
+         \caption{triângulo maior.}
+         \label{triangulo}
+      \end{figure}
+      \item Usando o pacote float\\
+      \begin{figure}[H]
+      % o pacote float vai forçar a imagem a ficar extamente onde está
+         \centering %para centralizar
+         \includegraphics[scale=0.2]{triangulo.jpg}
+         \caption{triângulomenor .} %para inserir legenda na figura
+         \label{triangulo menor}
+      \end{figure}
+       \item Usando a minha imagem em pasta diferente\\
+      \begin{figure}[H]
+      % o pacote float vai forçar a imagem a ficar extamente onde está
+         \centering %para centralizar
+         \includegraphics[scale=0.1]{imagens/delio.jpg}
+         \caption{minha foto .} %para inserir legenda na figura
+         \label{triangulo menor}
+      \end{figure}
+   \end{enumerate}      
    
 \end{document}

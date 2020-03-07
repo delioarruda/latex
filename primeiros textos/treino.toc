@@ -1,2 +1,5 @@
+\babel@toc {portuguese}{}
 \contentsline {section}{\numberline {1}Equação Polinômial do 2º Grau}{1}%
 \contentsline {section}{\numberline {2}Tchau Mundo}{1}%
+\contentsline {section}{\numberline {3}Aula 8 (Notações de Claculo)}{4}%
+\contentsline {section}{\numberline {4}Aula9 (Como inserir figuras no Latex)}{5}%
