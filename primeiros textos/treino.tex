@@ -10,7 +10,12 @@
 \usepackage{graphicx}
 %pacote para inserir a figura extamente no local, ignorando a formatação do texto e espaçamento
 \usepackage{float}
-\usepackage[portuguese]{babel}
+% pacote para modivicar a linguagem
+%\usepackage[portuguese]{babel}
+%pacote para colocar a linguagem em portugues brasileito
+\usepackage[brazil]{babel}
+%para criar identação
+\usepackage{indentfirst}
 %\setlength{\voffset}{-1.0cm} \setlength{\hoffset}{-0.5cm}
 %para decalrar o operador matemático
 \DeclareMathOperator{\sen}{sen}
@@ -20,15 +25,22 @@
 \newcommand{\limite}{\displaystyle\lim}
 \newcommand{\integral}{\displaystyle\int}
 \newcommand{\somatorio}{\displaystyle\sum}
-% define o título
-\author{Délio de Arruda Almeida}
 %definir o titulo
-\title{Educação Estatística}
+\title{Aqui vem o título do trabalho}
+% define o autor
+\author{Aqui vem o nome do autor \\ e-mail@dominio.com.br}
+% defomor a data (ano)
+\date{2020}
+
 \begin{document}
    % gera o título
    \maketitle
-   % insere o índices
-   \tableofcontents
+   %caso queira em uma página separada
+   \newpage
+   % insere o índices (sumáro)
+   \tableofcontents \newpage % o newpage é para deixar o suamário em pagina separada.
+   \listoffigures
+   \listoftables
 
    \section{Equação Polinômial do 2º Grau}
      É uma equação do tipo $ax^2+bx+c=0$ com $a\neq 0$ será chamada de        equação polinomial do 2º grau.
@@ -227,29 +239,80 @@
    \section{Aula9 (Como inserir figuras no Latex)}
    
    \begin{enumerate}
-      \item Calcule o valor da $x$ na figura \ref{triangulo}.%com essa referencia ele vai inserir o numero da figura 
-      \begin{figure}[!htb]
-      %como estou usanto scale=0.5 sera inserida a metade do tamanho da figura, como esta na mesma pasta não preciso colocar o caminho, apenas o nome do arquivo
-         \includegraphics[scale=0.5]{triangulo.jpg}
-         \caption{triângulo maior.}
-         \label{triangulo}
-      \end{figure}
-      \item Usando o pacote float\\
-      \begin{figure}[H]
-      % o pacote float vai forçar a imagem a ficar extamente onde está
-         \centering %para centralizar
-         \includegraphics[scale=0.2]{triangulo.jpg}
-         \caption{triângulomenor .} %para inserir legenda na figura
-         \label{triangulo menor}
-      \end{figure}
-       \item Usando a minha imagem em pasta diferente\\
-      \begin{figure}[H]
-      % o pacote float vai forçar a imagem a ficar extamente onde está
-         \centering %para centralizar
-         \includegraphics[scale=0.1]{imagens/delio.jpg}
-         \caption{minha foto .} %para inserir legenda na figura
-         \label{triangulo menor}
-      \end{figure}
-   \end{enumerate}      
+      \item Calcule o valor da $x$ na figura %\ref{triangulo}.
+      %com essa referencia ele vai inserir o numero da figura 
+%      \begin{figure}[!htb]
+%      %como estou usanto scale=0.5 sera inserida a metade do tamanho da figura, como esta na mesma pasta não preciso colocar o caminho, apenas o nome do arquivo
+%         \includegraphics[scale=0.5]{triangulo.jpg}
+%         \caption{triângulo maior.}
+%         \label{triangulo}
+%      \end{figure}
+%      \item Usando o pacote float\\
+%      \begin{figure}[H]
+%      % o pacote float vai forçar a imagem a ficar extamente onde está
+%         \centering %para centralizar
+%         \includegraphics[scale=0.2]{triangulo.jpg}
+%         \caption{triângulomenor .} %para inserir legenda na figura
+%         \label{triangulo menor}
+%      \end{figure}
+%       \item Usando a minha imagem em pasta diferente\\
+%      \begin{figure}[H]
+%      % o pacote float vai forçar a imagem a ficar extamente onde está
+%         \centering %para centralizar
+%         \includegraphics[scale=0.1]{imagens/delio.jpg}
+%         \caption{minha foto .} %para inserir legenda na figura
+%         \label{triangulo menor}
+%      \end{figure}
+%   \end{enumerate}      
+%   \begin{enumerate}
+      \item A Tabela \ref{minha-tabela} abaixo representa as derivadas básicas.
+      %para inserir tabela usamos o tabular e indicamos quantas colunas com as letras segunltes com l-para esquerda; r- para direita; c- para centralizar; p- paragrafo onde podemos indicar entre chaves o tamanho em centimetro.
+  
+      %\begin{center} %para centralizar a tabela
+      \begin{table}[!htb]
+      \centering
+      \begin{tabular}{|c||c|} \hline
+      Função & Derivadas \\ \hline \hline
+         $f(x)= x^n$ & $f'(x) = nx^{n-1}$\\ $f(x) = \log_a x$ & $f'(x)= \dfrac{1}{(\ln a)x}$ \\ \hline
+      \end{tabular}
+      \caption{Tabela Básica de Derivadas}
+      \label{minha-tabela}
+      \end{table}
+      %\end{center}
+   \end{enumerate}
+   \begin{center}
+      \begin{tabular}{cp{12cm}}
+      \begin{tabular}{c}\includegraphics[scale=0.5]{logoti.png}\end{tabular} & \begin{tabular}{c} Instituto Federal de Ciências e Tecnologia da Paraíba\\ Campus Cajazeiras\\Curso de Licenciatura em Matemática
+      
+      \end{tabular}
+      
+      \end{tabular}
+   \end{center}
+   %aula 11 - formatação de texto longo
+   \section{Introdução}
+   Aqui vem a introdução. Aqui vem a introdução. Aqui vem a introdução. Aqui vem a introdução. Aqui vem a introdução. Aqui vem a introdução. Aqui vem a introdução. Aqui vem a introdução. Aqui vem a introdução. Aqui vem a introdução. Aqui vem a introdução. Aqui vem a introdução. Aqui vem a introdução. Aqui vem a introdução. Aqui vem a introdução. Aqui vem a introdução. Aqui vem a introdução. 
    
+   Aqui vem a introdução. Aqui vem a introdução. Aqui vem a introdução. Aqui vem a introdução. Aqui vem a introdução. Aqui vem a introdução. Aqui vem a introdução. Aqui vem a introdução. Aqui vem a introdução. Aqui vem a introdução. Aqui vem a introdução. Aqui vem a introdução. 
+   \section{Aqui vem o título do Desenvolvimento}
+   Aqui vem o texto do desenvolvimento.Aqui vem o texto do desenvolvimento.Aqui vem o texto do desenvolvimento.Aqui vem o texto do desenvolvimento.Aqui vem o texto do desenvolvimento.Aqui vem o texto do desenvolvimento.Aqui vem o texto do desenvolvimento.Aqui vem o texto do desenvolvimento.Aqui vem o texto do desenvolvimento.Aqui vem o texto do desenvolvimento.Aqui vem o texto do desenvolvimento.Aqui vem o texto do desenvolvimento.Aqui vem o texto do desenvolvimento.
+   
+   Aqui vem o texto do desenvolvimento.Aqui vem o texto do desenvolvimento.Aqui vem o texto do desenvolvimento.Aqui vem o texto do desenvolvimento.Aqui vem o texto do desenvolvimento.Aqui vem o texto do desenvolvimento.Aqui vem o texto do desenvolvimento.Aqui vem o texto do desenvolvimento.Aqui vem o texto do desenvolvimento.Aqui vem o texto do desenvolvimento.Aqui vem o texto do desenvolvimento. 
+   
+   Aqui vem o texto do desenvolvimento.Aqui vem o texto do desenvolvimento.Aqui vem o texto do desenvolvimento.Aqui vem o texto do desenvolvimento.Aqui vem o texto do desenvolvimento.Aqui vem o texto do desenvolvimento. Delio
+   \newline Aqui vem o texto do desenvolvimento.Aqui vem o texto do desenvolvimento.Aqui vem o texto do desenvolvimento.
+   \subsection{Aqui vem o titulo da subseção}
+   Aqui vem o texto da subseção.Aqui vem o texto da subseção.Aqui vem o texto da subseção.Aqui vem o texto da subseção.Aqui vem o texto da subseção.Aqui vem o texto da subseção.
+   
+   Aqui vem o texto da subseção.Aqui vem o texto da subseção.Aqui vem o texto da subseção.Aqui vem o texto da subseção.Aqui vem o texto da subseção. \cite{meuatalho}
+   \subsubsection{Aqui vem o titulo da seção da subseção}
+   Aqui vem o texto da seção da subseção.Aqui vem o texto da seção da subseção.Aqui vem o texto da seção da subseção.Aqui vem o texto da seção da subseção.Aqui vem o texto da seção da subseção.
+   
+   Aqui vem o texto da seção da subseção.Aqui vem o texto da seção da subseção.Aqui vem o texto da seção da subseção.Aqui vem o texto da seção da subseção.\\ Aqui vem o texto da seção da subseção.Aqui vem o texto da seção da subseção.Aqui vem o texto da seção da subseção.Aqui vem o texto da seção da subseção. \cite{meuartigo}
+   \newpage
+   \bibliographystyle{plain}
+   \addcontentsline{toc}{section}{Referências}
+   \bibliography{referencia}
+   
+   \newpage
+   Fim do curso básico de \LaTeX. 
 \end{document}
