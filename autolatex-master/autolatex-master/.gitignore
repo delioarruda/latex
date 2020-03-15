@@ -1,0 +1,19 @@
+#ignore temporary latex files
+*.log
+*.aux
+*.toc
+*.snm
+*.pyg
+*.nav
+*.out
+*.vrb
+_minted-melissa_warmup_scipyla/
+# ignore backup files
+*.backup
+*~
+# ignore obsolete folder
+obsolete/*
+# ignore system folder
+.directory
+
+	

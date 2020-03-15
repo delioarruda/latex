@@ -1,0 +1,82 @@
+%
+% Definitions specific to siampaper.
+%
+\usepackage{amsfonts}
+\renewcommand*{\URL}[1]{\href{\detokenize{#1}}{\texttt{\detokenize{#1}}}}
+%
+% Import definitions common to all styles.
+%
+\usepackage{latex_styles_common}
+%
+% Page styles.
+%
+\def\ps@firstpage{%\ps@plain
+\def\@oddfoot{\normalfont\scriptsize \hfil\thepage\hfil\@gitline}%
+     %\global\topskip\normaltopskip}%
+  \let\@evenfoot\@oddfoot
+  \def\@oddhead{\hfil\normalfont\small\@cahierline}%
+  \let\@evenhead\@oddhead % in case an article starts on a left-hand page
+}
+
+\def\ps@myheadings{%
+    \def\@oddfoot{\normalfont\scriptsize\ttfamily\hfil\@gitline}
+    \def\@evenfoot{\normalfont\scriptsize\ttfamily\@gitline\hfil}
+    \def\@evenhead{\rlap{\thepage}\hfil\upshape\footnotesize\leftmark\hfil\scshape\hyperlink{contents}{[toc]}}%          %!
+    \def\@oddhead{\footnotesize\scshape\hyperlink{contents}{[toc]}\hfil{\upshape\footnotesize\rightmark}\hfil\llap{\thepage}}% %!
+    \let\@mkboth\@gobbletwo
+    \let\sectionmark\@gobble
+    \let\subsectionmark\@gobble
+    }
+\makeatother
+
+\makeatletter
+\@mparswitchfalse  % Place todo notes in wide margin.
+\def\listtodoname{Todo List}
+\def\listoftodos{%
+  \section*{\listtodoname}\mbox{~}\par
+  \@starttoc{tdo}
+  }
+\def\listalgorithmsname{List of Algorithms}
+\def\listofalgorithms{%
+  \section*{\listalgorithmsname}\mbox{~}\par
+  \@starttoc{loa}
+  }
+\def\l@algorithm{\@dottedtocline{1}{.25in}{1.8em}}
+\makeatother
+
+% The SIAM style doesn't seem to let us display a table of contents...
+% Let's fix that.
+\makeatletter
+\setcounter{tocdepth}{3}
+\renewcommand\tableofcontents{%
+  \section*{\contentsname}\mbox{~}\par
+    \@starttoc{toc}
+    }
+\newcommand*\l@section{\@dottedtocline{1}{.25in}{1.8em}}
+\newcommand*\l@subsection{\@dottedtocline{2}{.3in}{2.3em}}
+\newcommand*\l@subsubsection{\@dottedtocline{3}{.35in}{3.2em}}
+\newcommand*\l@paragraph{\@dottedtocline{4}{.4in}{4.1em}}
+\newcommand*\l@subparagraph{\@dottedtocline{5}{.45in}{5em}}
+\renewcommand\appendix{%
+  \setcounter{section}{0}%
+  \setcounter{subsection}{0}%
+  \renewcommand\thesection{\Alph{section}}}
+
+\newcommand\Appendix{%
+  \setcounter{section}{0}%
+  \setcounter{subsection}{0}%
+  \renewcommand\thesection{\Alph{section}}}
+\makeatother
+
+\newtheorem{example}{Example}[section]
+\newtheorem{remark}{Remark}
+\newtheorem{assumption}{Assumption}[section]
+
+%
+\newenvironment{bassumption}{%
+   \setlength{\fboxsep}{6pt}%
+   \par\hbox{}\noindent%
+   \begin{boxedminipage}{\textwidth}
+     \begin{assumption}}
+    {\end{assumption}
+    \end{boxedminipage}\vspace{0.5\baselineskip}}

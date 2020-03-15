@@ -1,0 +1,2 @@
+\beamer@sectionintoc {1}{UsandoBeamer}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Uma subseção}{6}{0}{1}

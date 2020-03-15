@@ -1,0 +1,130 @@
+\documentclass[runningheads,orivec]{llncs}
+\usepackage{lncspaper}
+\usepackage{draftwatermark}
+\SetWatermarkScale{8}
+\SetWatermarkLightness{.97}
+
+% For the Cahier du GERAD.
+%\renewcommand{\year}{2020}     % If you don't want the current year.
+\newcommand{\cahiernumber}{00}  % Insert your Cahier du GERAD number.
+
+% For debugging.
+%\usepackage{showframe}
+
+%% The lineno packages adds line numbers. Start line numbering with
+%% \begin{linenumbers}, end it with \end{linenumbers}. Or switch it on
+%% for the whole article with \linenumbers after \end{frontmatter}.
+%% \usepackage{lineno}
+
+% For final version.
+%\usepackage{butterma}
+%\idline{J.~Doe and E.~Muster (Eds.): Perfect Publishing, LNCS 9999}
+%\setcounter{page}{101}
+
+% if you have landscape tables
+%\usepackage[figuresright]{rotating}
+
+\title{%
+  Insert Title Here
+}
+\titlerunning{%
+  Insert Running Title (will appear in header)
+}
+\author{
+  Dominique Orban\inst{1,2}%
+  \thanks{Research partially supported by NSERC Discovery Grant 299010-04.}
+}
+\institute{
+  Department of Mathematics and Industrial Engineering,
+  \'Ecole Polytechnique,
+  Montr\'eal, QC, Canada.
+  \and
+  GERAD, Montr\'eal, QC, Canada.
+  \mailto{dominique.orban@gerad.ca}
+}
+\authorrunning{Orban}
+
+% Meta-information for the PDF file generated.
+\pdfinfo{/Author (Dominique Orban)
+         /Title (Insert Title Here)
+         /Keywords (keyword1, keyword2, keyword3)}
+
+% For final version, set paper format.
+%\pdfpagesattr{/CropBox [92 112 523 778]} % LNCS page: 152x235 mm
+
+\begin{document}
+
+\linenumbers
+
+\pagestyle{myheadings}
+
+\maketitle
+\thispagestyle{mytitlepage}   % Cahier du GERAD.
+%\thispagestyle{electronic}   % Published version.
+
+\begin{abstract}
+  Abstract goes here.
+\end{abstract}
+
+\keywords{Keywords go here}
+
+% Pour le cahier du GERAD.
+%\begin{resume}
+%
+%\end{resume}
+%\textbf{Mots cl\'es :}
+
+%%
+%% Start line numbering here if you want
+%%
+%\linenumbers
+
+\listoftodos
+
+\section{Introduction}
+\label{sec:introduction}
+
+This is the introduction.
+
+You can show code samples as in Listing~\ref{lst:somelisting}.
+
+\begin{lstlisting}[%float,
+                   label={lst:somelisting},
+                   caption={Some Listing.}]
+import numpy as np
+x = np.zeros(100)
+\end{lstlisting}
+
+\section{Discussion}
+\label{sec:discussion}
+
+A discussion is better than conclusions.
+
+%========================================================================
+%========================================================================
+\section{Notes}
+\label{sec:notes}
+
+%========================================================================
+
+%% The Appendices part is started with the command \appendix;
+%% appendix sections are then done as normal sections
+%% \appendix
+
+%% \section{}
+%% \label{}
+
+%% References
+%%
+%% Following citation commands can be used in the body text:
+%% Usage of \cite is as follows:
+%%   \cite{key}         ==>>  [#]
+%%   \cite[chap. 2]{key} ==>> [#, chap. 2]
+%%
+
+%% References with BibTeX database:
+
+\bibliographystyle{plainnat}
+\bibliography{test}
+
+\end{document}

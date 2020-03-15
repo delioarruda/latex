@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.23)  12 MAR 2020 16:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=latex 2020.3.14)  14 MAR 2020 13:44
 entering extended mode
 **./treino.tex
 (treino.tex
@@ -142,11 +142,11 @@ Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 cs.cfg"
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 105.
+Package graphics Info: Driver file: dvips.def on input line 105.
 
-("C:\Users\PMMH\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-def\pdftex
-.def"
-File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+("C:\Users\PMMH\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-def\dvips.
+def"
+File: dvips.def 2017/06/20 v3.1d Graphics/color driver for dvips
 ))
 \Gin@req@height=\dimen152
 \Gin@req@width=\dimen153
@@ -195,10 +195,15 @@ ty"
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 )
 ("C:\Users\PMMH\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3backend\l3backend
--pdfmode.def"
-File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count193
+-dvips.def"
+File: l3backend-dvips.def 2020-02-03 L3 backend support: dvips
 \l__pdf_internal_box=\box49
+\g__pdf_backend_object_int=\count193
+\l__pdf_backend_content_box=\box50
+\l__pdf_backend_model_box=\box51
+\g__pdf_backend_annotation_int=\count194
+\g__pdf_backend_link_int=\count195
+\g__pdf_backend_link_sf_int=\count196
 ) (treino.aux)
 \openout1 = `treino.aux'.
 
@@ -218,9 +223,9 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
 LaTeX Font Info:    ... okay on input line 35.
 
 *geometry* driver: auto-detecting
-*geometry* detected driver: pdftex
+*geometry* detected driver: dvips
 *geometry* verbose mode - [ preamble ] result:
-* driver: pdftex
+* driver: dvips
 * paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
@@ -251,30 +256,7 @@ LaTeX Font Info:    ... okay on input line 35.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-
-("C:\Users\PMMH\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-pd
-f.mkii"
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count194
-\scratchdimen=\dimen155
-\scratchbox=\box50
-\nofMPsegments=\count195
-\nofMParguments=\count196
-\everyMPshowfont=\toks25
-\MPscratchCnt=\count197
-\MPscratchDim=\dimen156
-\MPnumerator=\count198
-\makeMPintoPDFobject=\count199
-\everyMPtoPDFconversion=\toks26
-)
-("C:\Users\PMMH\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epstopdf-pkg\epstop
-df-base.sty"
-Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-85.
-)
 LaTeX Font Info:    Trying to load font information for U+msa on input line 37.
-
 
 ("C:\Users\PMMH\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -287,8 +269,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 [1
 
-{C:/Users/PMMH/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-(treino.toc)
+] (treino.toc)
 \tf@toc=\write3
 \openout3 = `treino.toc'.
 
@@ -300,44 +281,15 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@lot=\write5
 \openout5 = `treino.lot'.
 
- [3] [4] [5] [6]
-<logoti.png, id=36, 72.27pt x 104.0688pt>
-File: logoti.png Graphic file (type png)
-<use logoti.png>
-Package pdftex.def Info: logoti.png  used on input line 285.
-(pdftex.def)             Requested size: 36.1349pt x 52.03427pt.
- [7 <./logoti.png>]
-[8] (treino.bbl) [9] [10] (treino.aux) ) 
+ [3] [4] [5] [6] [7] [8]
+(treino.bbl) [9] [10] (treino.aux) ) 
 Here is how much of TeX's memory you used:
- 3589 strings out of 481556
- 49462 string characters out of 2914337
- 307355 words of memory out of 3000000
- 18776 multiletter control sequences out of 15000+200000
+ 3181 strings out of 481557
+ 43805 string characters out of 2914363
+ 303631 words of memory out of 3000000
+ 18382 multiletter control sequences out of 15000+200000
  542825 words of font info for 63 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 30i,17n,27p,487b,322s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\PMMH\AppData\Local\MiKTeX\2.
-9\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\PMMH\AppData\Local\
-MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcbx1728.pk> <C:\Users\PMMH\AppDa
-ta\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcbx1200.pk><C:/Users/PM
-MH/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-<C:/Users/PMMH/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmbxti10.pfb><C:/Users/PMMH/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmex10.pfb><C:/Users/PMMH/AppData/Local/Programs/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/PMMH/AppData/Local/Programs/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/PMMH/AppData/Local/P
-rograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/PMMH/AppD
-ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/User
-s/PMMH/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pf
-b><C:/Users/PMMH/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmsy10.pfb><C:/Users/PMMH/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmsy8.pfb><C:/Users/PMMH/AppData/Local/Programs/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/PMMH/AppData/Local/Programs/MiKT
-eX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/PMMH/AppData/Lo
-cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on treino.pdf (10 pages, 185798 bytes).
-PDF statistics:
- 106 PDF objects out of 1000 (max. 8388607)
- 0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 30i,15n,27p,487b,283s stack positions out of 5000i,500n,10000p,200000b,50000s
 
+Output written on treino.dvi (10 pages, 19312 bytes).

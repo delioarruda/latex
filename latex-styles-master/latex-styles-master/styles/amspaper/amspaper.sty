@@ -1,0 +1,68 @@
+%
+% Import definitions common to all styles.
+%
+\usepackage{latex_styles_common0}
+\usepackage{latex_styles_common}
+\usepackage{styled_theorems}
+%
+% Definitions specific to amspaper.
+%
+\setlength{\footskip}{30pt}
+\renewcommand*{\URL}[1]{\href{\detokenize{#1}}{\texttt{\detokenize{#1}}}}
+
+\makeatletter
+%
+% Page styles.
+%
+\def\ps@firstpage{\ps@plain
+  \def\@oddfoot{\normalfont\scriptsize \hfil\thepage\hfil\ttfamily\@gitline
+     \global\topskip\normaltopskip}%
+  \let\@evenfoot\@oddfoot
+  \def\@oddhead{\@serieslogo\hss\hfil\normalfont\small\rlap{\@cahierline}\hfil}%
+  \let\@evenhead\@oddhead % in case an article starts on a left-hand page
+}
+
+\def\ps@myheadings{\ps@empty
+  \def\@evenhead{%
+    \setTrue{runhead}%
+    \normalfont\scriptsize
+    \rlap{\thepage}\hfil
+    \def\thanks{\protect\thanks@warning}%
+    \leftmark{}{}\hfil%
+    \normalfont\scriptsize\scshape\hyperlink{contents}{[toc]}%
+    }%
+  \def\@oddhead{%
+    \normalfont\scriptsize\scshape\hyperlink{contents}{[toc]}%
+    \setTrue{runhead}%
+    \normalfont\scriptsize \hfil
+    \def\thanks{\protect\thanks@warning}%
+    \rightmark{}{}\hfil \llap{\thepage}}%
+  \def\@oddfoot{\normalfont\scriptsize\ttfamily\hfil\@gitline}
+  \def\@evenfoot{\normalfont\scriptsize\ttfamily\@gitline\hfil}
+  \let\@mkboth\markboth
+}
+%
+% To do list.
+%
+\providecommand\@dotsep{5}
+\def\listtodoname{List of Todos}
+\def\listoftodos{\@starttoc{tdo}\listtodoname}
+%
+% List of algorithms.
+%
+\def\@floatboxreset{\global\@minipagefalse}  % Disable auto centering in floats.
+\def\listofalgorithms{\@starttoc{loa}{List of Algorithms}}
+\def\l@algorithm{\@tocline{0}{3pt plus2pt}{0pt}{1.9em}{}}
+\makeatother
+
+\newtheorem{example}{Example}
+\newtheorem{conjecture}{Conjecture}
+\theoremstyle{definition}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+
+\numberwithin{equation}{section}
+%
+% Operators.
+%
+\newcommand{\Range}{\mathop{\text{Range}}}

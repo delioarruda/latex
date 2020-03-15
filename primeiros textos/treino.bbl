@@ -1,0 +1,13 @@
+\begin{thebibliography}{1}
+
+\bibitem{meuartigo}
+Nome do~Autor.
+\newblock Aqui vem o titulo.
+\newblock 2015.
+
+\bibitem{meuatalho}
+Nome do~Autor.
+\newblock {\em Aqui vem o titulo}.
+\newblock Nome da Editora, Cidade, 2020.
+
+\end{thebibliography}

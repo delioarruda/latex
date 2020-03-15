@@ -1,0 +1,290 @@
+\documentclass{beamer}
+\mode<presentation>
+{
+  \usetheme{Boadilla}
+  \usecolortheme{purple}
+  \setbeamercovered{transparent}
+}
+\usepackage[portuguese]{babel}
+\usepackage[utf8]{inputenc} % Para usar acentos
+\usepackage{fancyvrb} % verbose 
+\usepackage{ctable} % Comandos \toprule,\bottomrule,\midrule para tabelas
+
+% Novos macros
+
+\newcommand{\code}[1]{\texttt{#1}}
+\newcommand{\reint}[4]{\int_#1^#2 \! #3 \, #4}
+
+\title[\LaTeX\ como linguagem de programação]{\LaTeX\ como linguagem de programação\\(Hackeando em \TeX\textbackslash\LaTeX)} \author[M. Weber Mendonça]
+{\hspace{-0.3cm}Melissa Weber Mendonça\inst{1}}
+\institute[UFSC]{\inst{1} Universidade Federal de Santa Catarina}
+\date{FISL14}
+
+\logo{\includegraphics[height=1.5cm]{/home/melissa/Documentos/latex/brasao_UFSC.png}}
+
+\begin{document}
+\begin{frame}
+   % Title
+   \titlepage
+\end{frame}
+\begin{frame}
+   \frametitle{\TeX\textbackslash\LaTeX}
+   \begin{block}{}
+      \emph{\TeX\ is intentionally Turing-complete (it has conditionals, loops, and recursion), but while it can be made to do amazing things, \TeX\ code tends to be unreadable and painful to debug.} -- Eric S. Raymond
+   \end{block}
+\end{frame}
+\begin{frame}
+   \frametitle{Exemplo: Código obfuscado}
+   \begin{block}{}
+      \centering{\raisebox{0pt}[10pt][5pt]{\code{xii.tex}}}
+   \end{block}
+\end{frame}
+\begin{frame}
+   \frametitle{Criar novos comandos}
+   Podemos criar novos comandos usando 
+   \begin{center}
+      \begin{block}{}
+         \begin{center}
+            \code{\textbackslash newcommand} ou \code{\textbackslash renewcommand}
+         \end{center}
+      \end{block}
+   \end{center}
+   no preâmbulo do documento (antes de \code{\textbackslash begin\{document\}}).
+   Exemplo:
+
+   \begin{center}
+      \code{\textbackslash newcommand\{\textbackslash nome\}\{Melissa\}}
+   \end{center}
+\end{frame}
+\begin{frame}
+   \frametitle{Novos comandos com argumentos}
+   Exemplo: 
+   \begin{center}
+      \begin{tabular}{l c}
+         \code{\textbackslash int\underline{ }a\^{}b f(x) dx} & $\displaystyle \int_a^b f(x) dx$\\
+         \code{\textbackslash reint\{a\}\{b\}\{f(x)\}\{dx\}} & $\displaystyle \reint{a}{b}{f(x)}{dx}$
+      \end{tabular}
+   \end{center}
+   \vspace{.5cm}
+   \begin{center}
+      \code{\textbackslash newcommand\{\textbackslash reint\}[4]\{\textbackslash int\underline{ }\{$\#$1\}\^{}\{$\#$2\}\textbackslash ! \!\!$\#$3 \textbackslash , $\#$4\}}
+   \end{center}
+\end{frame}
+\begin{frame}
+   \frametitle{Macros: \code{\textbackslash def\textbackslash macro}}
+   Podemos definir variáveis usando o comando
+   \begin{center}
+      \begin{block}{}
+        \begin{center}
+          \code{\textbackslash def\textbackslash macro}\{valor\}
+        \end{center}
+      \end{block}
+   \end{center}
+   (\TeX\ puro!)
+
+   Exemplo:
+   \begin{center}
+     \code{\textbackslash def\textbackslash nome\{Melissa\}}
+   \end{center}
+ \end{frame}
+\begin{frame}
+   \frametitle{Exemplo}
+   Documentação de software.
+   \begin{center}
+      \begin{block}{}
+         \begin{center}
+            \code{doc.tex}
+         \end{center}
+      \end{block}
+   \end{center}
+\end{frame}
+\begin{frame}
+  \frametitle{Manipulação de números}
+  Em \TeX\textbackslash \LaTeX, temos \alert{contadores}
+  \begin{center}
+     \begin{block}{}
+        \begin{center}
+           \code{\textbackslash newcount \textbackslash meucontador}\\
+           \code{\textbackslash meucontador = valor}
+        \end{center}
+     \end{block}
+  \end{center}
+  \begin{center}
+    \begin{block}{}
+      \begin{center}
+        \code{\textbackslash newcounter\{meucontador\}}\\
+        \code{\textbackslash setcounter\{meucontador\}\{valor\}}
+      \end{center}
+    \end{block}
+  \end{center}
+\end{frame}
+\begin{frame}
+   \frametitle{Manipulação de números}
+   E \alert{dimensões}:
+   \begin{center}
+      \begin{block}{}
+         \begin{center}
+            \code{\textbackslash newdimen\textbackslash dimensao}\\
+            \code{\textbackslash dimensao=valor\alert{un}}
+         \end{center}
+      \end{block}
+   \end{center}
+   \begin{center}
+      \begin{block}{}
+         \begin{center}
+            \code{\textbackslash newlength\{\textbackslash dimensao\}}\\
+            \code{\textbackslash setlength\{\textbackslash dimensao\}\{valor\alert{un}\}}
+         \end{center}
+      \end{block}
+   \end{center}
+   Uma dimensão é um número (decimal) seguido de uma unidade de medida (\code{pt}, \code{mm}, \code{cm}) ou um número (decimal) seguido de um macro que expande em uma dimensão.
+   
+   Exemplo: \code{1.5\textbackslash textwidth}
+\end{frame}
+\begin{frame}
+   \frametitle{Acessar valores}
+   \begin{itemize}
+      \item \code{\textbackslash theContador} imprime a expressão formatada correspondente ao contador.
+      \item \code{\textbackslash value\{Contador\}} retorna o valor do contador que é utilizado para cálculos.
+      \item \code{\textbackslash arabic\{Contador\}} imprime a expressão correspondente ao contador em numerais arábicos.
+   \end{itemize}
+   Note que \code{\textbackslash arabic} pode também ser usado como um valor, mas não os outros. 
+\end{frame}
+\begin{frame}
+  \frametitle{Exemplo}
+  \begin{center}
+    \begin{block}{}
+      \begin{center}
+        \code{inteiros.tex}
+      \end{center}
+    \end{block}
+  \end{center}
+\end{frame}
+\begin{frame}
+  \frametitle{Manipulação de números}
+   \begin{itemize}
+      \item \TeX\ permite manipular números inteiros: $+$, $-$, \code{\textbackslash divide}, \code{\textbackslash multiply}
+      \item Para contadores e dimensões, podemos usar o pacote \code{calc}: $*$, $/$, \code{maxof}, \code{minof}, \code{real} (\emph{Cuidado!} \TeX\ trunca dimensões em 5 casas decimais!)
+      \item Para operações com números reais, podemos usar dimensões ou o pacote \code{pgfmath}
+   \end{itemize}
+\end{frame}
+\begin{frame}
+   \frametitle{Exemplo}
+   \begin{center}
+      \begin{block}{}
+         \begin{center}
+            \code{recibo.tex}
+         \end{center}
+      \end{block}
+   \end{center}
+\end{frame}
+\begin{frame}
+   \frametitle{Condicionais}
+   Podemos criar estruturas condicionais: \code{\textbackslash newif\textbackslash ifteste}
+   \begin{itemize}
+      \item \code{\textbackslash ifnum num1 relação num2} (compara dois inteiros)
+      % The relation must be either ‘<12 ’ or ‘=12’ or ‘>12 ’.
+      \item \code{\textbackslash ifdim dimen1 relação dimen2} (compara duas dimensões)
+      % This is like \ifnum, but it compares two dimen values. For example, to test whether the value of \hsize exceeds 100 pt, you can say ‘\ifdim\hsize>100pt’.
+      \item \code{\textbackslash ifodd num} (testa se um inteiro é ímpar)
+      % The condition is true if the number is odd, false if it is even.
+      \item \code{\textbackslash ifmmode} (testa se estamos no modo matemático)
+      % True if TEX is in math mode or display math mode (see Chapter 13).
+      \item \code{\textbackslash ifeof num} (testa se estamos no fim de um arquivo)
+      % The number should be between 0 and 15. The condition is true unless the corresponding input stream is open and not fully read. (See the command \openin below.)
+      \item \code{\textbackslash iftrue}, \code{\textbackslash iffalse}
+   \end{itemize}
+\end{frame}
+\begin{frame}
+   \frametitle{Exemplo}
+   \begin{center}
+      \begin{block}{}
+         \begin{center}
+            \code{condicionais.tex}
+         \end{center}
+      \end{block}
+   \end{center}
+\end{frame}
+\begin{frame}
+   \frametitle{Exemplo}
+   \begin{center}
+      \begin{block}{}
+         \begin{center}
+            \code{ftoc.tex}
+         \end{center}
+      \end{block}
+   \end{center}
+\end{frame}
+\begin{frame}
+   \frametitle{Loops - Repetição}
+   \begin{itemize}
+      \item \TeX\ puro: \code{\textbackslash loop\textbackslash if $\langle$condição$\rangle$ -- \textbackslash repeat}
+      \item Pacote \code{forloop}
+      \item Pacote \code{pgf}: \code{\textbackslash foreach}
+   \end{itemize}
+\end{frame}
+\begin{frame}
+   \frametitle{Loops: Exemplo}
+   \begin{center}
+      \begin{block}{}
+         \begin{center}
+            ingressos.tex \qquad ingressos\underline{}forloop.tex
+         \end{center}
+      \end{block}
+   \end{center}
+\end{frame}
+\begin{frame}
+   \frametitle{Exemplo}
+   \begin{center}
+      \begin{block}{}
+         \begin{center}
+            loop.tex
+         \end{center}
+      \end{block}
+   \end{center}
+\end{frame}
+\begin{frame}
+   \frametitle{Exemplo}
+   \begin{center}
+      \begin{block}{}
+         \begin{center}
+            \code{fibonacci.tex}
+         \end{center}
+      \end{block}
+   \end{center}
+%   Baseado em \code{https://www.sharelatex.com/blog/2012/04/24/latex-is-more-powerful-than-you-think.html}
+\end{frame}
+\begin{frame}
+   \frametitle{Ler arquivos}
+   \begin{center}
+      \begin{block}{}
+         \begin{center}
+            \code{readfile.tex}
+         \end{center}
+      \end{block}
+   \end{center}
+\end{frame}
+\begin{frame}
+   \frametitle{Outros exemplos curiosos}
+   \begin{itemize}
+      \item Conjunto de Mandlebrot em \LaTeX\ {\footnotesize{\code{http://warp.povusers.org/MandScripts/latex.html}}}
+      \item Máquina de Turing em \LaTeX\ {\footnotesize{\code{http://en.literateprograms.org/Turing\underline{}machine\underline{}simulator\underline{}(LaTeX)}}}
+      %This is a Turing machine that creates a description of its state as it runs the 3-state busy beaver problem.
+      \item Um controlador para o mars rover em \LaTeX\ {\footnotesize{\code{http://sdh33b.blogspot.com/2008/07/icfp-contest-2008.html}}}
+   \end{itemize}
+\end{frame}
+\begin{frame}
+   \begin{center}
+      \Huge{Obrigada!}
+   \end{center}
+
+   \vspace{2cm}
+   \begin{center}
+      \Large{
+      \code{@melissawm}
+
+      \code{melissawm@gmail.com}
+   }
+   \end{center}
+\end{frame}
+\end{document}

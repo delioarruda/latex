@@ -1,0 +1,57 @@
+\ProvidesPackage{lncspaper}
+%
+% Import definitions common to all styles.
+%
+\usepackage{latex_styles_common0}
+\usepackage{latex_styles_common}
+%
+% Definitions specific to llncspaper.
+%
+\usepackage{amsfonts}
+\newcommand*{\URL}[1]{\href{\detokenize{#1}}{\texttt{\detokenize{#1}}}}
+%
+% Make a proper TOC.
+%
+\setcounter{tocdepth}{2}
+\makeatletter
+\renewcommand*\l@author[2]{}
+\renewcommand*\l@title[2]{}
+\renewcommand{\chapter}{\section}
+
+\def\ps@mytitlepage{\let\@mkboth\@gobbletwo
+   \def\@oddfoot{\normalfont\scriptsize\ttfamily\hfil\@gitline}
+   \def\@evenfoot{\normalfont\scriptsize\ttfamily\@gitline\hfil}
+   \def\@evenhead{\normalfont\small\rlap{\@cahierline}\hspace{\headlineindent}%
+                  \hfil}
+   \def\@oddhead{\normalfont\small\hfil\hspace{\headlineindent}%
+                 \llap{\@cahierline}}
+   \def\chaptermark##1{}%
+   \def\sectionmark##1{}%
+   \def\subsectionmark##1{}}
+
+\def\ps@myheadings{\let\@mkboth\@gobbletwo
+   \def\@oddfoot{\normalfont\scriptsize\ttfamily\hfil\@gitline}
+   \def\@evenfoot{\normalfont\scriptsize\ttfamily\@gitline\hfil}
+   \def\@evenhead{\normalfont\small\rlap{\thepage}\hspace{\headlineindent}%
+    \leftmark\hfil\scshape\hyperlink{contents}{[toc]}}
+    \def\@oddhead{\normalfont\small\scshape\hyperlink{contents}{[toc]}\hfil\rightmark\hspace{\headlineindent}%
+                 \llap{\thepage}}
+   \def\chaptermark##1{}%
+   \def\sectionmark##1{}%
+   \def\subsectionmark##1{}}
+\makeatother
+
+\usepackage{enumerate}
+
+\newcommand{\Class}[1]{\texttt{#1}}
+\newcommand{\Method}[1]{\texttt{#1()}}
+\newcommand{\Attribute}[1]{\texttt{#1}}
+
+\usepackage[
+% school,
+% simplified
+]{pgf-umlcd}
+%
+% Operators.
+%
+\newcommand{\Range}{\mathop{\mathrm{Range}}}

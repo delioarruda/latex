@@ -1,0 +1,55 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\title{Rates of Convergence}
+\author{Your Name Here}
+
+\begin{document}
+
+\maketitle
+
+\section{Algorithms and Convergence}
+
+In many cases, we wish to analize the behaviour of an algorithm as the number of iterations tends to infinity.
+
+Let the sequence of real numbers $\{ \beta_n\}_{n=1}^{\infty}$ go to zero as $n$ goes to infinity and let $\{\alpha_n\}_{n=1}^{\infty}$ be a sequence that converges to a real number $\alpha$ as $n$ goes to infinity. If there is a positive constant $K$ and a natural number $n_0$ such that
+\begin{equation}
+|\alpha_n-\alpha| \leq K|\beta_n|, \qquad \text{ for } n\geq n_0,
+\end{equation}
+we say that $\{\alpha_n\}$ converges to $\alpha$ with an asymptotic convergence rate of $O(\beta_n)$, and we can write
+%
+%
+$$\alpha_n = \alpha + O(\beta_n).$$
+%
+%
+Instead of using an arbitrary sequence $\{\beta_n\}$, we generally choose
+$$\beta_n = \frac{1}{n^p},$$
+for some $p>0$. In general, we wish to find the biggest $p$ such that
+$$\alpha_n = \alpha + O\left(\frac{1}{n^p}\right).$$
+
+% This is a (totally made up!! :) table
+\begin{center}
+  \begin{tabular}{c r l}
+    Distros & KDE & Gnome\\
+    Ubuntu & Yes & Yes\\
+    Arch & Yes & No\\
+    Chakra & Yes & No\\
+    Fedora & No & Yes
+  \end{tabular}
+\end{center}
+
+\begin{center}
+  \begin{tabular}{| c | r | l |}
+    \hline
+    Distros & KDE & Gnome\\\hline
+    Ubuntu & Yes & Yes\\\hline
+    Arch & Yes & No\\\hline
+    Chakra & Yes & No\\\hline
+    Fedora & No & Yes\\\hline
+  \end{tabular}
+\end{center}
+%
+%
+
+
+\end{document}
